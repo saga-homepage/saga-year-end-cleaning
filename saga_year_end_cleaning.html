@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAGA 年末大掃除のご案内</title>
+  <meta name="description" content="SAGAの年末大掃除サービス。レンジフード、浴室、トイレ、キッチン、洗面所、窓・サッシ、床・フローリングまで、プロの清掃で気持ちよく新年を。お見積り無料。" />
+  <style>
+    :root{
+      --blue:#0b5fb3;
+      --deep:#073a73;
+      --sky:#eaf6ff;
+      --yellow:#ffd84d;
+      --green:#27a85f;
+      --red:#e84444;
+      --ink:#183047;
+      --muted:#5f7182;
+      --line:#dfe8ef;
+      --white:#fff;
+      --shadow:0 12px 32px rgba(26,72,108,.12);
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+      color:var(--ink);
+      background:#fff;
+      line-height:1.75;
+    }
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1120px,calc(100% - 32px));margin:auto}
+    .hero{
+      background:linear-gradient(135deg,#0a68c8 0%,#0e8fe0 62%,#dff5ff 100%);
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+      padding:32px 0 56px;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;inset:auto -80px -130px auto;
+      width:360px;height:360px;border-radius:50%;
+      background:rgba(255,255,255,.12);
+    }
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:38px}
+    .brand{font-size:28px;font-weight:900;letter-spacing:.04em}
+    .smalltag{font-weight:700;background:rgba(255,255,255,.15);padding:9px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.28)}
+    .hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:42px;align-items:center}
+    .eyebrow{display:inline-block;background:#fff;color:var(--blue);font-weight:800;padding:7px 14px;border-radius:999px;margin-bottom:16px}
+    h1{font-size:clamp(42px,6vw,76px);line-height:1.08;margin:0 0 18px;font-weight:950;letter-spacing:.02em}
+    .hero-lead{font-size:20px;font-weight:700;max-width:720px}
+    .hero-note{margin:20px 0 0;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:14px 16px;border-radius:14px;font-weight:700}
+    .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 22px;border-radius:14px;font-weight:900;box-shadow:0 8px 20px rgba(0,0,0,.10)}
+    .btn-yellow{background:var(--yellow);color:#26384b}
+    .btn-green{background:#23c264;color:#fff}
+    .hero-card{background:#fff;border-radius:26px;padding:14px;box-shadow:0 18px 45px rgba(0,0,0,.18)}
+    .hero-card img{border-radius:18px;width:100%;height:auto}
+    section{padding:78px 0}
+    .section-kicker{text-align:center;color:var(--blue);font-weight:900;letter-spacing:.08em;margin-bottom:8px}
+    h2{text-align:center;font-size:clamp(30px,4vw,46px);line-height:1.25;margin:0 0 18px}
+    .section-lead{text-align:center;color:var(--muted);max-width:780px;margin:0 auto 36px}
+    .problems{background:#f7fbff}
+    .check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:860px;margin:auto}
+    .check{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:0 6px 18px rgba(39,85,120,.06);font-weight:800}
+    .check::before{content:"✓";display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#fff3c7;color:#d4442d;margin-right:10px;font-weight:900}
+    .solution{text-align:center;margin-top:28px;font-size:28px;font-weight:950;color:var(--blue)}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .service{border-radius:20px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+    .service .pic{aspect-ratio:4/3;background:linear-gradient(135deg,#eaf6ff,#fefefe);display:grid;place-items:center;font-size:60px}
+    .service .body{padding:20px}
+    .service h3{margin:0 0 7px;font-size:22px}
+    .service p{margin:0;color:var(--muted)}
+    .benefits{background:linear-gradient(180deg,#fffaf0,#ffffff)}
+    .benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .benefit{background:#fff;padding:26px;border-radius:20px;border:1px solid #f0e2aa;box-shadow:0 8px 24px rgba(153,116,32,.08)}
+    .benefit .icon{font-size:40px}
+    .benefit h3{margin:8px 0 6px;font-size:22px}
+    .ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .ba-card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+    .ba-img{display:grid;grid-template-columns:1fr 1fr;min-height:220px}
+    .ba-img div{display:grid;place-items:center;font-weight:900;font-size:22px}
+    .before{background:#eceff3;color:#5a6470}
+    .after{background:#e9f9ee;color:#187341}
+    .ba-card h3{margin:0;padding:16px 18px 6px}
+    .ba-card p{margin:0;padding:0 18px 20px;color:var(--muted)}
+    .pricebox{background:linear-gradient(135deg,#0d5eb4,#0b8aca);color:#fff;border-radius:28px;padding:34px;display:grid;grid-template-columns:1.3fr .7fr;gap:20px;align-items:center;box-shadow:var(--shadow)}
+    .pricebox h2{text-align:left;color:#fff;margin-bottom:10px}
+    .pricebox p{margin:0 0 8px}
+    .free{font-size:26px;font-weight:950;color:#ffe56b}
+    .steps{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+    .step{position:relative;text-align:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 12px}
+    .step-num{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;margin:0 auto 10px;background:var(--blue);color:#fff;font-weight:900}
+    .step strong{display:block}
+    .faq{background:#f7fbff}
+    details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:12px auto;max-width:900px}
+    summary{cursor:pointer;font-weight:900}
+    details p{color:var(--muted);margin-bottom:0}
+    .final-cta{background:linear-gradient(135deg,#fff4c1,#fff);padding:70px 0 90px}
+    .final-box{border:3px solid var(--blue);border-radius:26px;padding:32px;background:#fff;text-align:center;box-shadow:var(--shadow)}
+    .phone{font-size:clamp(36px,7vw,64px);font-weight:950;color:#d51f2e;letter-spacing:.02em}
+    .hours{font-weight:800;color:var(--deep)}
+    .line-btn{display:inline-flex;margin-top:16px;background:#20c35a;color:#fff;padding:15px 22px;border-radius:14px;font-weight:900}
+    footer{background:#073a73;color:#dbeaff;padding:24px 0 90px;text-align:center}
+    .sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid #dce7ef;padding:10px 12px;display:none;gap:10px}
+    .sticky a{flex:1;text-align:center;padding:14px 12px;border-radius:12px;color:#fff;font-weight:900}
+    .sticky .tel{background:var(--blue)}
+    .sticky .line{background:#20c35a}
+    @media(max-width:900px){
+      .hero-grid,.pricebox{grid-template-columns:1fr}
+      .services-grid,.benefit-grid,.ba-grid{grid-template-columns:repeat(2,1fr)}
+      .steps{grid-template-columns:repeat(3,1fr)}
+    }
+    @media(max-width:640px){
+      .topbar{align-items:flex-start;flex-direction:column}
+      .hero{padding-top:22px}
+      .hero-grid{gap:26px}
+      .check-grid,.services-grid,.benefit-grid,.ba-grid{grid-template-columns:1fr}
+      .steps{grid-template-columns:repeat(2,1fr)}
+      section{padding:56px 0}
+      .wrap{width:min(100% - 20px,1120px)}
+      .sticky{display:flex}
+      footer{padding-bottom:96px}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="topbar">
+        <div class="brand">SAGA</div>
+        <div class="smalltag">いつもご利用いただいているお客様へ</div>
+      </div>
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">年末大掃除のご案内</span>
+          <h1>今年の汚れは、<br>今年のうちに。</h1>
+          <p class="hero-lead">ご家庭では大変な場所も、プロの清掃でスッキリきれいに。気持ちよく新年を迎えませんか？</p>
+          <div class="cta-row">
+            <a class="btn btn-yellow" href="tel:0120115134">📞 0120-115-134</a>
+            <a class="btn btn-green" href="#contact">LINEで相談する</a>
+          </div>
+          <div class="hero-note">年末はご予約が集中します。ご希望の日程がある方は、お早めにご相談ください。</div>
+        </div>
+        <div class="hero-card">
+          <img src="2026年末大掃除.jpg" alt="SAGA 年末大掃除のご案内チラシ">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="problems">
+    <div class="wrap">
+      <div class="section-kicker">こんな方におすすめ</div>
+      <h2>年末のお掃除、こんなお悩みありませんか？</h2>
+      <div class="check-grid">
+        <div class="check">年末は忙しくて、掃除の時間がない</div>
+        <div class="check">自分では落としきれない汚れが気になる</div>
+        <div class="check">普段できない場所まできれいにしたい</div>
+        <div class="check">プロの仕上がりで気持ちよく新年を迎えたい</div>
+      </div>
+      <div class="solution">そのお悩み、SAGAにおまかせください。</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-kicker">CLEANING MENU</div>
+      <h2>お掃除できる場所</h2>
+      <p class="section-lead">気になる場所だけでも、複数箇所まとめてでもご相談いただけます。</p>
+      <div class="services-grid">
+        <article class="service"><div class="pic">🍳</div><div class="body"><h3>レンジフード・換気扇</h3><p>頑固な油汚れをしっかり落として、換気もスムーズに。</p></div></article>
+        <article class="service"><div class="pic">🛁</div><div class="body"><h3>浴室（お風呂）</h3><p>水アカ・カビ・石けんカスを徹底除去。清潔で気持ちの良い浴室に。</p></div></article>
+        <article class="service"><div class="pic">🚽</div><div class="body"><h3>トイレ</h3><p>汚れ・ニオイのもとを徹底清掃。快適な空間に。</p></div></article>
+        <article class="service"><div class="pic">🍽️</div><div class="body"><h3>キッチン</h3><p>油汚れ・水アカを落として、ピカピカのキッチンに。</p></div></article>
+        <article class="service"><div class="pic">🧼</div><div class="body"><h3>洗面所</h3><p>水アカや汚れをすっきり落として、清潔な洗面台に。</p></div></article>
+        <article class="service"><div class="pic">🪟</div><div class="body"><h3>窓・サッシ</h3><p>ホコリ・汚れを落として、明るいお部屋に。</p></div></article>
+        <article class="service"><div class="pic">✨</div><div class="body"><h3>床・フローリング</h3><p>普段落とせない汚れもすっきりきれいに。</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="wrap">
+      <div class="section-kicker">WHY SAGA</div>
+      <h2>SAGAにお願いするメリット</h2>
+      <div class="benefit-grid">
+        <div class="benefit"><div class="icon">🧽</div><h3>プロの清掃</h3><p>普段のお掃除では落としにくい汚れも、経験豊富なスタッフが丁寧に対応します。</p></div>
+        <div class="benefit"><div class="icon">🧹</div><h3>まとめて相談OK</h3><p>キッチン・浴室・トイレなど、複数箇所をまとめてご相談いただけます。</p></div>
+        <div class="benefit"><div class="icon">🏠</div><h3>いつものSAGAだから安心</h3><p>いつもご利用いただいているお客様を優先的にご案内いたします。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-kicker">BEFORE / AFTER</div>
+      <h2>仕上がりイメージ</h2>
+      <p class="section-lead">実際の施工写真が用意できたら、この部分をBefore / After写真に差し替えると、より伝わりやすくなります。</p>
+      <div class="ba-grid">
+        <div class="ba-card"><div class="ba-img"><div class="before">BEFORE</div><div class="after">AFTER</div></div><h3>レンジフード</h3><p>油汚れの蓄積を落として、すっきりした仕上がりへ。</p></div>
+        <div class="ba-card"><div class="ba-img"><div class="before">BEFORE</div><div class="after">AFTER</div></div><h3>浴室</h3><p>水アカやカビを落として、明るく清潔な浴室へ。</p></div>
+        <div class="ba-card"><div class="ba-img"><div class="before">BEFORE</div><div class="after">AFTER</div></div><h3>キッチン</h3><p>油汚れ・水アカを落として、気持ちよく使えるキッチンへ。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="pricebox">
+        <div>
+          <div class="section-kicker" style="text-align:left;color:#d8efff">PRICE</div>
+          <h2>まずは無料でお見積り</h2>
+          <p>清掃箇所や汚れの状態によって料金が異なります。</p>
+          <p>気になる場所がございましたら、まずはお気軽にご相談ください。</p>
+          <div class="free">お見積り無料</div>
+        </div>
+        <div class="cta-row" style="justify-content:center;margin-top:0">
+          <a class="btn btn-yellow" href="tel:0120115134">電話で相談する</a>
+          <a class="btn btn-green" href="#contact">LINEで相談する</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-kicker">FLOW</div>
+      <h2>ご予約からお掃除まで</h2>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><strong>お問い合わせ</strong><span>電話・LINEからご連絡</span></div>
+        <div class="step"><div class="step-num">2</div><strong>ご希望箇所確認</strong><span>清掃したい場所を確認</span></div>
+        <div class="step"><div class="step-num">3</div><strong>お見積り</strong><span>内容に応じてご案内</span></div>
+        <div class="step"><div class="step-num">4</div><strong>日時決定</strong><span>ご希望日を調整</span></div>
+        <div class="step"><div class="step-num">5</div><strong>清掃</strong><span>スタッフが丁寧に作業</span></div>
+        <div class="step"><div class="step-num">6</div><strong>作業完了</strong><span>仕上がりをご確認</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <div class="section-kicker">FAQ</div>
+      <h2>よくある質問</h2>
+      <details open><summary>見積りだけでも大丈夫ですか？</summary><p>はい。お気軽にご相談ください。お見積りは無料です。</p></details>
+      <details><summary>複数箇所をお願いできますか？</summary><p>はい。キッチン・浴室・トイレなど、まとめてご相談いただけます。</p></details>
+      <details><summary>希望の日に来てもらえますか？</summary><p>できる限り対応いたしますが、年末は予約が集中するため、ご希望に添えない場合があります。</p></details>
+      <details><summary>どのくらい時間がかかりますか？</summary><p>清掃箇所や汚れの状態によって異なります。お問い合わせ時にご案内いたします。</p></details>
+    </div>
+  </section>
+
+  <section id="contact" class="final-cta">
+    <div class="wrap">
+      <div class="final-box">
+        <div class="section-kicker">CONTACT</div>
+        <h2>今年の汚れは今年のうちに。<br>気持ちよく新年を迎えませんか？</h2>
+        <p>お見積り無料。お気軽にご相談ください。</p>
+        <a class="phone" href="tel:0120115134">0120-115-134</a>
+        <div class="hours">受付時間 9:00〜18:00（年中無休）</div>
+        <a class="line-btn" href="#">LINEで相談する</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© SAGA. All Rights Reserved.</div>
+  </footer>
+
+  <div class="sticky">
+    <a class="tel" href="tel:0120115134">📞 電話する</a>
+    <a class="line" href="#contact">LINEで相談</a>
+  </div>
+</body>
+</html>
