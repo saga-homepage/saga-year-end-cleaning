@@ -67,25 +67,11 @@
     .check{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:0 6px 18px rgba(39,85,120,.06);font-weight:800}
     .check::before{content:"✓";display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#fff3c7;color:#d4442d;margin-right:10px;font-weight:900}
     .solution{text-align:center;margin-top:28px;font-size:28px;font-weight:950;color:var(--blue)}
-    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .service{border-radius:20px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
-    .service .pic{aspect-ratio:4/3;background:linear-gradient(135deg,#eaf6ff,#fefefe);display:grid;place-items:center;font-size:60px}
-    .service .body{padding:20px}
-    .service h3{margin:0 0 7px;font-size:22px}
-    .service p{margin:0;color:var(--muted)}
     .benefits{background:linear-gradient(180deg,#fffaf0,#ffffff)}
     .benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
     .benefit{background:#fff;padding:26px;border-radius:20px;border:1px solid #f0e2aa;box-shadow:0 8px 24px rgba(153,116,32,.08)}
     .benefit .icon{font-size:40px}
     .benefit h3{margin:8px 0 6px;font-size:22px}
-    .ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .ba-card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
-    .ba-img{display:grid;grid-template-columns:1fr 1fr;min-height:220px}
-    .ba-img div{display:grid;place-items:center;font-weight:900;font-size:22px}
-    .before{background:#eceff3;color:#5a6470}
-    .after{background:#e9f9ee;color:#187341}
-    .ba-card h3{margin:0;padding:16px 18px 6px}
-    .ba-card p{margin:0;padding:0 18px 20px;color:var(--muted)}
     .pricebox{background:linear-gradient(135deg,#0d5eb4,#0b8aca);color:#fff;border-radius:28px;padding:34px;display:grid;grid-template-columns:1.3fr .7fr;gap:20px;align-items:center;box-shadow:var(--shadow)}
     .pricebox h2{text-align:left;color:#fff;margin-bottom:10px}
     .pricebox p{margin:0 0 8px}
@@ -110,14 +96,14 @@
     .sticky .line{background:#20c35a}
     @media(max-width:900px){
       .hero-grid,.pricebox{grid-template-columns:1fr}
-      .services-grid,.benefit-grid,.ba-grid{grid-template-columns:repeat(2,1fr)}
+      .benefit-grid{grid-template-columns:repeat(2,1fr)}
       .steps{grid-template-columns:repeat(3,1fr)}
     }
     @media(max-width:640px){
       .topbar{align-items:flex-start;flex-direction:column}
       .hero{padding-top:22px}
       .hero-grid{gap:26px}
-      .check-grid,.services-grid,.benefit-grid,.ba-grid{grid-template-columns:1fr}
+      .check-grid,.benefit-grid{grid-template-columns:1fr}
       .steps{grid-template-columns:repeat(2,1fr)}
       section{padding:56px 0}
       .wrap{width:min(100% - 20px,1120px)}
@@ -165,22 +151,7 @@
     </div>
   </section>
 
-  <section>
-    <div class="wrap">
-      <div class="section-kicker">CLEANING MENU</div>
-      <h2>お掃除できる場所</h2>
-      <p class="section-lead">気になる場所だけでも、複数箇所まとめてでもご相談いただけます。</p>
-      <div class="services-grid">
-        <article class="service"><div class="pic">🍳</div><div class="body"><h3>レンジフード・換気扇</h3><p>頑固な油汚れをしっかり落として、換気もスムーズに。</p></div></article>
-        <article class="service"><div class="pic">🛁</div><div class="body"><h3>浴室（お風呂）</h3><p>水アカ・カビ・石けんカスを徹底除去。清潔で気持ちの良い浴室に。</p></div></article>
-        <article class="service"><div class="pic">🚽</div><div class="body"><h3>トイレ</h3><p>汚れ・ニオイのもとを徹底清掃。快適な空間に。</p></div></article>
-        <article class="service"><div class="pic">🍽️</div><div class="body"><h3>キッチン</h3><p>油汚れ・水アカを落として、ピカピカのキッチンに。</p></div></article>
-        <article class="service"><div class="pic">🧼</div><div class="body"><h3>洗面所</h3><p>水アカや汚れをすっきり落として、清潔な洗面台に。</p></div></article>
-        <article class="service"><div class="pic">🪟</div><div class="body"><h3>窓・サッシ</h3><p>ホコリ・汚れを落として、明るいお部屋に。</p></div></article>
-        <article class="service"><div class="pic">✨</div><div class="body"><h3>床・フローリング</h3><p>普段落とせない汚れもすっきりきれいに。</p></div></article>
-      </div>
-    </div>
-  </section>
+
 
   <section class="benefits">
     <div class="wrap">
@@ -194,18 +165,7 @@
     </div>
   </section>
 
-  <section>
-    <div class="wrap">
-      <div class="section-kicker">BEFORE / AFTER</div>
-      <h2>仕上がりイメージ</h2>
-      <p class="section-lead">実際の施工写真が用意できたら、この部分をBefore / After写真に差し替えると、より伝わりやすくなります。</p>
-      <div class="ba-grid">
-        <div class="ba-card"><div class="ba-img"><div class="before">BEFORE</div><div class="after">AFTER</div></div><h3>レンジフード</h3><p>油汚れの蓄積を落として、すっきりした仕上がりへ。</p></div>
-        <div class="ba-card"><div class="ba-img"><div class="before">BEFORE</div><div class="after">AFTER</div></div><h3>浴室</h3><p>水アカやカビを落として、明るく清潔な浴室へ。</p></div>
-        <div class="ba-card"><div class="ba-img"><div class="before">BEFORE</div><div class="after">AFTER</div></div><h3>キッチン</h3><p>油汚れ・水アカを落として、気持ちよく使えるキッチンへ。</p></div>
-      </div>
-    </div>
-  </section>
+
 
   <section>
     <div class="wrap">
